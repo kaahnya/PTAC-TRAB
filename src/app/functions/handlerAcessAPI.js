@@ -33,20 +33,20 @@ const lista =[
 }
 ]
 
-const getUserAuthenticated = (user) => {
-    let usermach =[];
-
-    lista.map((user) =>{
+const getUserAuthenticated = (userLogin) => {
+    let usermach = [];
+ 
+     lista.map((user) =>{
+ 
     if(user.email === userLogin.email && user.password === userLogin.password){
-        usermach = user
-    }
-    })
-
-    return usermach
-}
-
-const getUsers = () =>{
-    return lista
-        
-}
-export { getUsers, getUserAuthenticated };
+    usermach = user
+     } 
+ })
+  
+ return usermach 
+ }
+ 
+ const getUsers = () =>{
+      return lista
+ }
+ export { getUsers, getUserAuthenticated };
