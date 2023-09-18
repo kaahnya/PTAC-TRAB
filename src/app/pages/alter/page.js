@@ -2,17 +2,18 @@
 
 import {ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import './css.css';
 
 export default async function Alter() {
 
     const onAlter = async (e) => {
         e.preventDefault();
-          toast.success("Dados de usuario alterados com sucesso");
+          toast.info("Dados de usuario alterados com sucesso")
       }
 
 return(
-    <div>
-      <h1>Alter</h1>
+    <div className="form">
+      <h1>ALTER</h1>
       <form onSubmit={onAlter}>
       <input
           placeholder='Nome'
@@ -26,7 +27,7 @@ return(
           placeholder='Senha'
           type='password'>
         </input>
-        <button>Alterar Dados</button>
+        <button>ALTERAR DADOS</button>
       </form>
       <ToastContainer/>
     </div>

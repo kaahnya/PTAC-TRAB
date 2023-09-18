@@ -4,6 +4,7 @@ import handlerAcessUser from "./functions/handlerAcess"
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import './css.css';
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -26,7 +27,7 @@ export default function Login() {
     }
   }
   return (
-    <div>
+    <div className="form">
       <h1>Login</h1>
       <form onSubmit={handlerLogin}>
         <input
@@ -39,7 +40,7 @@ export default function Login() {
           type='password'
           onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
         </input>
-        <button>Entrar</button>
+        <button className="botua">Entrar</button>
       </form>
       <ToastContainer/>
     </div>

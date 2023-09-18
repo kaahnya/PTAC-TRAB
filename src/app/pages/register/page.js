@@ -2,17 +2,18 @@
 
 import {ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import './css.css';
 
 export default async function Register() {
 
     const onRegister = async (e) => {
         e.preventDefault();
-          toast.success("Dados de usuario cadastrados com sucesso");
+          toast.info("Dados de usuario cadastrados com sucesso");
       }
 
 return(
-    <div>
-      <h1>Alter</h1>
+    <div className="form">
+      <h1>Register</h1>
       <form onSubmit={onRegister}>
       <input
           placeholder='Nome'
@@ -26,7 +27,7 @@ return(
           placeholder='Senha'
           type='password'>
         </input>
-        <button>Cadastrar Dados</button>
+        <button className="butao">Cadastrar Dados</button>
       </form>
       <ToastContainer/>
     </div>
