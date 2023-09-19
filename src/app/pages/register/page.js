@@ -3,6 +3,7 @@
 import {ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './css.css';
+import Menu from "@/app/componentes/menu/menu";
 
 export default async function Register() {
 
@@ -12,8 +13,9 @@ export default async function Register() {
       }
 
 return(
+  <div><Menu></Menu>
     <div className="form">
-      <h1>Register</h1>
+      <h1>REGISTER</h1>
       <form onSubmit={onRegister}>
       <input
           placeholder='Nome'
@@ -27,9 +29,10 @@ return(
           placeholder='Senha'
           type='password'>
         </input>
-        <button className="butao">Cadastrar Dados</button>
+        <button className="butao">CADASTRAR</button>
       </form>
       <ToastContainer/>
     </div>
+  </div>
   )
 }

@@ -1,7 +1,7 @@
 
 
 export const metadata = {
-  title: 'STERAK',
+  title: 'HOME',
   description: 'Project for class PTAC',
 }
 

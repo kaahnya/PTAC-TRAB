@@ -11,7 +11,7 @@
 .butao {
     background-color: #ffffff;
     border: solid 1px #3498db;
-    padding: 15px 44px;
+    padding: 15px 55px;
     color: #3498db;
     text-align: center;
     text-decoration: none;
@@ -34,7 +34,7 @@ input{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 h1{

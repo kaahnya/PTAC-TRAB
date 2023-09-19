@@ -3,6 +3,7 @@
 import {ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import './css.css';
+import Menu from "@/app/componentes/menu/menu";
 
 export default async function Alter() {
 
@@ -12,6 +13,7 @@ export default async function Alter() {
       }
 
 return(
+  <div><Menu></Menu>
     <div className="form">
       <h1>ALTER</h1>
       <form onSubmit={onAlter}>
@@ -30,6 +32,7 @@ return(
         <button>ALTERAR DADOS</button>
       </form>
       <ToastContainer/>
+    </div>
     </div>
   )
 }

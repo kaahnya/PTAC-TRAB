@@ -5,4 +5,10 @@ h1{
 
 .lista{
     text-align: center;
+    display: inline;
+}
+
+.carre{
+    display: inline;
+    text-align: center;
 }
