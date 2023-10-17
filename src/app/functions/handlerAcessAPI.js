@@ -1,40 +1,20 @@
 'use server'
 
-const users =[
-{
-    name: "kakah",
-    email: "kakah@gmail.com",
-    password: "123",
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-},
-{
-    name: "gabriwk",
-    email: "gabriwk@gmail.com",
-    password: "123",
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-},
-{
-    name: "joao",
-    email: "joao.santos@gmail.com",
-    password: "123",
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-}
-]
+const url = "https://aula-17-10-two.vercel.app"
 
-const getUserAuthenticated = (userLogin) => {
-    let usermach = [];
- 
-     users.map((user) =>{
- 
-    if(user.email === userLogin.email && user.password === userLogin.password){
-    usermach = user
-     } 
- })
-  
- return usermach 
- }
- 
+const getUserAuthenticated = async (user) => {
+    const responseOfApi = await fetch(url + "/user/authenticated",
+    {
+        method:"POST",
+        headers:{ "Content-type":"Application/json"},
+        body:JSON.stringify(user)
+    }
+  );
+  const userAuth = await responseOfApi.json();
+  return userAuth
+}
+
  const getUsers = () =>{
-      return users
+      
  }
  export { getUsers, getUserAuthenticated };
